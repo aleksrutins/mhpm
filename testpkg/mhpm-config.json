@@ -1,5 +1,5 @@
 {
     "name": "Test Package",
     "version": "1.0.0",
-    "pkgfile": "http://localhost:8000/testpkg/testpkg.js"
+    "pkgfile": "https://cdn.jsdelivr.net/gh/munchkinhalfling/mhpm/testpkg/testpkg.js"
 }

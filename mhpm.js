@@ -16,7 +16,7 @@
             static load(name) {
                 if(!mhpmRepoLoaded) {
                     console.info("mhpm: loading repo file");
-                    mhpmRepoJson = requestJson('http://localhost:8000/repository.json');
+                    mhpmRepoJson = requestJson('https://cdn.jsdelivr.net/gh/munchkinhalfling/mhpm/repository.json');
                     mhpmRepoLoaded = true;
                     console.info("mhpm: repo file loaded");
                 }
