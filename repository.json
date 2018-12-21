@@ -3,6 +3,10 @@
         {
             "name": "Test Package",
             "conf-file": "http://localhost:8000/testpkg/mhpm-config.json"
+        },
+        {
+            "name": "Web Windowing Framework",
+            "conf-file": "http://localhost:8000/packages/Web%20Windowing%20Framework/mhpm-config.json"
         }
     ]
 }

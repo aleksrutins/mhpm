@@ -12,7 +12,7 @@
         return JSON.parse(request(url));
     }
     (function() { // Closure for Module
-        class Module {
+        class Package {
             static load(name) {
                 if(!mhpmRepoLoaded) {
                     console.info("mhpm: loading repo file");
@@ -20,12 +20,12 @@
                     mhpmRepoLoaded = true;
                     console.info("mhpm: repo file loaded");
                 }
-                console.info("mhpm: installing package '" + name + "'");
+                console.info("mhpm: loading package '" + name + "'");
                 let pkg = mhpmRepoJson.pkgs.find((_pkg) => _pkg.name === name);
                 let pkgConfFile = requestJson(pkg["conf-file"]);
                 return eval(request(pkgConfFile.pkgfile));
             }
         }
-        window.Module = Module;
+        window.Package = Package;
     })();
 })();

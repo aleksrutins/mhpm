@@ -9,8 +9,10 @@
 </head>
 <body>
     <script>
-        const testpkg = Module.load('Test Package');
+        const testpkg = Package.load('Test Package');
+        const wwf = Package.load('Web Windowing Framework');
         testpkg.sayHi();
+        var wnd = wwf.openWindow("Testing", "<h1>hi</h1>");
     </script>
 </body>
 </html>
