@@ -1,0 +1,8 @@
+{
+    "pkgs": [
+        {
+            "name": "Test Package",
+            "conf-file": "http://localhost:8000/testpkg/mhpm-config.json"
+        }
+    ]
+}
