@@ -16,7 +16,7 @@
             static load(name) {
                 if(!mhpmRepoLoaded) {
                     console.info("mhpm: loading repo file");
-                    mhpmRepoJson = requestJson('https://gitcdn.link/repo/munchkinhalfling/mhpm/master/repository.json');
+                    mhpmRepoJson = requestJson('https://raw.githack.com/munchkinhalfling/mhpm/master/repository.json');
                     mhpmRepoLoaded = true;
                     console.info("mhpm: repo file loaded");
                 }
