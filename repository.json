@@ -2,7 +2,7 @@
     "pkgs": [
         {
             "name": "Easy XHR",
-            "conf-file": "https://raw.githack.com/munchkinhalfling/EasyXHR/mhpm-config.json"
+            "conf-file": "https://raw.githack.com/munchkinhalfling/EasyXHR/master/mhpm-config.json"
         },
         {
             "name": "MHPM Scripts",
