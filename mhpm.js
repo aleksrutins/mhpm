@@ -20,14 +20,18 @@
                     mhpmRepoLoaded = true;
                     console.info("mhpm: repo file loaded");
                 }
-                console.info("mhpm: loading package '" + name + "'");
                 let pkg = mhpmRepoJson.pkgs.find((_pkg) => _pkg.name === name);
-                let pkgConfFile = requestJson(pkg["conf-file"]);
+                return Package.loadFromConfig(pkg["conf-file"]);
+            }
+            static loadFromConfig(path) {
+                console.info("mhpm: loading from config file " + path);
+                let confFile = requestJson(path);
+                console.info("mhpm: package name is '" + confFile.name + "'");
                 let resolvedDeps = new Set();
-                for(let dep of pkgConfFile.dependencies) {
+                for(let dep of confFile.dependencies) {
                     resolvedDeps.add(Package.load(dep));
                 }
-                return eval(request(pkgConfFile.pkgfile))(...resolvedDeps);
+                return eval(request(confFile.pkgfile))(...resolvedDeps);
             }
         }
         window.Package = Package;
