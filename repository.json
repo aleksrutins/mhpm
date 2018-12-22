@@ -3,6 +3,14 @@
         {
             "name": "Easy XHR",
             "conf-file": "https://cdn.jsdelivr.net/gh/munchkinhalfling/EasyXHR@latest/mhpm-config.json"
+        },
+        {
+            "name": "MHPM Scripts",
+            "conf-file": "https://cdn.jsdelivr.net/gh/munchkinhalfling/mhpm-scripts@latest/mhpm-config.json"
+        },
+        {
+            "name": "mhpm-npm",
+            "conf-file": "https://cdn.jsdelivr.net/gh/munchkinhalfling/mhpm-npm@latest/mhpm-config.json"
         }
     ]
 }
