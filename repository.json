@@ -1,5 +1,8 @@
 {
     "pkgs": [
-        
+        {
+            "name": "Easy XHR",
+            "conf-file": "https://cdn.jsdelivr.net/gh/munchkinhalfling/EasyXHR/mhpm-config.json"
+        }
     ]
 }
