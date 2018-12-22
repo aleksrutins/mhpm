@@ -2,15 +2,15 @@
     "pkgs": [
         {
             "name": "Easy XHR",
-            "conf-file": "https://gitcdn.link/repo/munchkinhalfling/EasyXHR/master/mhpm-config.json"
+            "conf-file": "https://raw.githack.com/munchkinhalfling/EasyXHR/mhpm-config.json"
         },
         {
             "name": "MHPM Scripts",
-            "conf-file": "https://gitcdn.link/repo/munchkinhalfling/mhpm-scripts/master/mhpm-config.json"
+            "conf-file": "https://raw.githack.com/munchkinhalfling/mhpm-scripts/master/mhpm-config.json"
         },
         {
             "name": "mhpm-npm",
-            "conf-file": "https://gitcdn.link/repo/munchkinhalfling/mhpm-npm/master/mhpm-config.json"
+            "conf-file": "https://raw.githack.com/munchkinhalfling/mhpm-npm/master/mhpm-config.json"
         }
     ]
 }
