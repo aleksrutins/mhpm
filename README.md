@@ -18,7 +18,7 @@ First, create a GitHub repo or something else for your package. Then, create an 
 {
   "name": "package name goes here",
   "version": "(optional) package version",
-  "dependencies": [], /* REQUIRED, even if it's an empty list */
+  "dependencies": ["Required, even if it's an empty list"],
   "pkgfile": "(REQUIRED) javascript file of the package (see below)"
 }
 ```
