@@ -4,7 +4,7 @@ This is a package manager for client-side JavaScript.
 ### Getting Started
 To include MHPM, put the following into your `<head>`:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/munchkinhalfling/mhpm@latest/mhpm.js"></script>
+<script src="https://gitcdn.link/repo/munchkinhalfling/mhpm/master/mhpm.js"></script>
 ```
 Then, in a script, you can import any package in the [repository file](https://github.com/munchkinhalfling/mhpm/blob/master/repository.json) with the following:
 ```js
