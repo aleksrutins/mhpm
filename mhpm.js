@@ -23,7 +23,11 @@
                 console.info("mhpm: loading package '" + name + "'");
                 let pkg = mhpmRepoJson.pkgs.find((_pkg) => _pkg.name === name);
                 let pkgConfFile = requestJson(pkg["conf-file"]);
-                return eval(request(pkgConfFile.pkgfile));
+                let resolvedDeps = new Set();
+                for(let dep of pkgConfFile.dependencies) {
+                    resolvedDeps.add(Package.load(dep));
+                }
+                return eval(request(pkgConfFile.pkgfile))(...resolvedDeps);
             }
         }
         window.Package = Package;
