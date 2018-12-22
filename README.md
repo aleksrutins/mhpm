@@ -12,6 +12,10 @@ Then, in a script, you can import any package in the [repository file](https://g
 const MyModule = Package.load("Package Name");
 // ...
 ```
+You can also load packages from specific configuration files (described below) not listed in the repository file with the following:
+```js
+const MyUnlistedModule = Package.loadFromConfig("https://path/to/mhpm-config.json");
+```
 ### Creating Packages
 First, create a GitHub repo or something else for your package. Then, create an `mhpm-config.json` file that has the following syntax:
 ```json
