@@ -8,9 +8,9 @@ To include MHPM, put the following into your `<head>`:
 ```
 Then, in a script, you can import any package in the [repository file](https://github.com/munchkinhalfling/mhpm/blob/master/repository.json) with the following:
 ```js
-...
+// ...
 const MyModule = Package.load("Package Name");
-...
+// ...
 ```
 ### Creating Packages
 First, create a GitHub repo or something else for your package. Then, create an `mhpm-config.json` file that has the following syntax:
@@ -18,17 +18,18 @@ First, create a GitHub repo or something else for your package. Then, create an 
 {
   "name": "package name goes here",
   "version": "(optional) package version",
+  "dependencies": [], // REQUIRED, even if it's an empty list
   "pkgfile": "(REQUIRED) javascript file of the package (see below)"
 }
 ```
 Then, create a JavaScript file (the path/URL goes in the `pkgfile` field) that follows the following syntax:
 ```js
-(function() {
+(function(/* dependencies (in order) */) {
   // code/private variables
   return {
     // exported variables go here
   };
-})() // notice: NO SEMICOLON AFTER CLOSURE
+}) //NOTICE: NO SEMICOLON (it must be an anonymous function)
 ```
 After that, go into the repository file and add an entry in the `pkgs` array that has the following format:
 ```json
@@ -38,5 +39,3 @@ After that, go into the repository file and add an entry in the `pkgs` array tha
 }
 ```
 Then send me a pull request!
-<br/><br/>
-Note: I suggest that you create a GitHub repo for it and use [jsDelivr](jsdelivr.com) for the URLS, just so that the repo file stays consistent and doesn't reference a gazillion CDNs.
