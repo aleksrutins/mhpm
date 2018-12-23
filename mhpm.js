@@ -24,7 +24,7 @@
                     console.info("mhpm: repo file loaded");
                 }
                 let pkg = mhpmRepoJson.pkgs.find((_pkg) => _pkg.name === name);
-                return Package.loadFromConfig(pkg["conf-file"]);
+                return await Package.loadFromConfig(pkg["conf-file"]);
             }
             static async loadFromConfig(path) {
                 console.info("mhpm: loading from config file " + path);
@@ -32,7 +32,7 @@
                 console.info("mhpm: package name is '" + confFile.name + "'");
                 let resolvedDeps = new Set();
                 for(let dep of confFile.dependencies) {
-                    resolvedDeps.add(Package.load(dep));
+                    resolvedDeps.add(await Package.load(dep));
                 }
                 return eval(await request(confFile.pkgfile))(...resolvedDeps);
             }
