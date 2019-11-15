@@ -1,4 +1,4 @@
-(function() { // Closure for mhpm library
+(function(window) { // Closure for mhpm library
     let mhpmRepoJson;
     let mhpmRepoLoaded = false;
     let request = url => {
@@ -39,4 +39,4 @@
         }
         window.Package = Package;
     })();
-})();
+})(window || module.exports);

@@ -1,0 +1,22 @@
+{
+  "name": "mhpm",
+  "version": "1.0.0",
+  "description": "MunchkinHalfling's Package Manager",
+  "main": "mhpm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preversion": "git add --all && git commit -m \"Clean git for npm version\"",
+    "postversion": "git push && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/munchkinhalfling/mhpm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/munchkinhalfling/mhpm/issues"
+  },
+  "homepage": "https://github.com/munchkinhalfling/mhpm#readme",
+  "keywords": ["package-manager", "web"]
+}
